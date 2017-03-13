@@ -1,3 +1,15 @@
-Android CI Docker image
+This image contains Java8 and AndroidSDK to build apk in a CI environment. At the moment there is no support for running an emulator.
 
-Check https://hub.docker.com/r/gazeria/android-ci/
+Supported version :
+
+* android-25 to android-19, android-17, android-15, android-10
+* build-tools :
+ * 25.0.2
+ * 24.0.3
+ * 23.0.3
+ * 22.0.1
+ * 21.1.2
+ * 20.0.0
+ * 19.1.0
+
+This image also has fastlane installed.
