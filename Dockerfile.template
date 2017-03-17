@@ -11,7 +11,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget build-essential git-c
 
 # ------------------------------------------------------
 # --- Download Android SDK tools into $ANDROID_HOME
-RUN cd /opt && wget -q https://dl.google.com/android/repository/tools_r25.2.4-linux.zip -O android-sdk-tools.zip
+RUN cd /opt && wget -q https://dl.google.com/android/repository/tools_r{SDK_VERSION}-linux.zip -O android-sdk-tools.zip
 RUN cd /opt && unzip -q android-sdk-tools.zip
 RUN mkdir -p ${ANDROID_HOME}
 RUN cd /opt && mv tools/ ${ANDROID_HOME}/tools/
@@ -25,11 +25,11 @@ RUN echo y | android update sdk --no-ui --all --filter platform-tools | grep 'pa
 
 # SDKs
 # Please keep these in descending order!
-RUN echo y | android update sdk --no-ui --all --filter android-19 | grep 'package installed'
+RUN echo y | android update sdk --no-ui --all --filter android-{VERSION} | grep 'package installed'
 
 # build tools
 # Please keep these in descending order!
-RUN echo y | android update sdk --no-ui --all --filter build-tools-19.1.0 | grep 'package installed'
+RUN echo y | android update sdk --no-ui --all --filter build-tools-{BUILD_TOOLS} | grep 'package installed'
 
 # Extras
 RUN echo y | android update sdk --no-ui --all --filter extra-android-m2repository | grep 'package installed'
