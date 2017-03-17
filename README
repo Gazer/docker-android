@@ -1,15 +1,17 @@
-This image contains Java8 and AndroidSDK to build apk in a CI environment. At the moment there is no support for running an emulator.
+This images contains Java8 and AndroidSDK to build apk in a CI environment.
 
-Supported version :
+At the moment there is no support for running an emulator.
 
-* android-25 to android-19, android-17, android-15, android-10
-* build-tools :
- * 25.0.2
- * 24.0.3
- * 23.0.3
- * 22.0.1
- * 21.1.2
- * 20.0.0
- * 19.1.0
+Each Dockefile has a version of android SDK and build-tools :
 
-This image also has fastlane installed.
+* DockerfileXX : android-XX and build-tools-XX.Y.Z (with y.z the lastest release for XX)
+
+You can pull each of these from the Docker Hub using android version as tag :
+
+```
+$ docker pull gazeria/docker-android:XX
+```
+
+The supported android version goes from 19 to 25.
+
+Also this images include fastlane installed.
