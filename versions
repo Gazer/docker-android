@@ -1,4 +1,4 @@
-sdk_version=25.2.4
+sdk_version=25.2.5
 tools19=19.1.0
 tools20=20.0.0
 tools21=21.1.2
@@ -6,3 +6,4 @@ tools22=22.0.1
 tools23=23.0.3
 tools24=24.0.3
 tools25=25.0.2
+tools26=26.1.1
